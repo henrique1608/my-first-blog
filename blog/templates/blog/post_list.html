@@ -1,30 +1,26 @@
-<html>
-    <head>
-        <title>O TIME</title>
-    </head>
+{% extends 'blog/base.html' %}
 
-    <body>
+{% block content %}
+    {% for post in posts %}
+       <div class="content container">
+         <div class="row">
+            <div class="col-md-8">
+                    <div class="post">
+                        <div class="date">
+                            <p>published: {{ post.published_date }}</p>
+                        </div>
+                        <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                        <p>{{ post.text|linebreaksbr }}</p>
+                    </div>
+            </div>
+         </div>
 
-    <div>
-        <h1><a href="/">O PRIMEIRO SITE</a></h1>
-        <h2>O PRIMEIRO LINK</h2>
-    </div>
-    <a href="https://twitch.tv">TWITCH</a>
+           <ul><li><font color="#b33a8d">ZIP</font></li><li><font color="#bc1086">ZOP</font></li><li><font color="#791358">PLIC</font><li><font color="#f600a8">PLAC</font></li></ul>
+           <p><font color="#f6004a">FALA TIME</font> </p>
+           <p><font color="#f6004a">É SÓ UM SITE</font> </p>
+           <p><font color="#f6004a">ESTOU FUNCIONANDO</font> </p>
+           <p><font color="#f6004a">PRIMEIRA CRAÇÃO</font> </p>
+       </div>
 
-   {% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h2><a href="">{{ post.title }}</a></h2>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
-{% endfor %}
-
-    <ul><li>ZIP</li><li>ZOP</li><li>PLIC</li><li>PLAC</li></ul>
-    <p>FALA TIME!</p>
-        <p>TA FUNCIONANDO!</p>
-    <p>É SÓ UM SITE DE TESTE</p>
-    <p>PRIMEIRA CRIAÇÃO</p>
-
-</body>
-</html>
-
+       {% endfor %}
+{% endblock %}
