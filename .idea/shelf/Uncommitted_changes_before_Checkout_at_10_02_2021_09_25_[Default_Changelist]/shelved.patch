@@ -1,0 +1,34 @@
+Index: blog/urls.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/blog/urls.py b/blog/urls.py
+new file mode 100644
+--- /dev/null	(date 1612958041291)
++++ b/blog/urls.py	(date 1612958041291)
+@@ -0,0 +1,6 @@
++from django.urls import path
++from . import views
++
++urlpatterns = [
++    path('', views.post_list, name='post_list'),
++]
+Index: mysite/urls.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/mysite/urls.py b/mysite/urls.py
+new file mode 100644
+--- /dev/null	(date 1612957903230)
++++ b/mysite/urls.py	(date 1612957903230)
+@@ -0,0 +1,7 @@
++from django.contrib import admin
++from django.urls import path, include
++
++urlpatterns = [
++    path('admin/', admin.site.urls),
++    path('', include('blog.urls')),
++]
+\ No newline at end of file
