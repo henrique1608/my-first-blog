@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>O TIME</title>
+    </head>
+
+    <body>
+
+    <div>
+        <h1><a href="/">O PRIMEIRO SITE</a></h1>
+        <h2>O PRIMEIRO LINK</h2>
+    </div>
+    <a href="https://twitch.tv">TWITCH</a>
+
+   {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+
+    <ul><li>ZIP</li><li>ZOP</li><li>PLIC</li><li>PLAC</li></ul>
+    <p>FALA TIME!</p>
+        <p>TA FUNCIONANDO!</p>
+    <p>É SÓ UM SITE DE TESTE</p>
+    <p>PRIMEIRA CRIAÇÃO</p>
+
+</body>
+</html>
+
