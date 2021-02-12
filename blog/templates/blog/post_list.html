@@ -9,18 +9,27 @@
                         <div class="date">
                             <p>published: {{ post.published_date }}</p>
                         </div>
-                        <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-                        <p>{{ post.text|linebreaksbr }}</p>
+                        <h2><a href="{% url 'post_detail' pk=post.pk %}"><font color="#ffffff">{{ post.title }}</font></a></h2>
+                        <p><font color="#ffffff">{{ post.text|linebreaksbr }}</font></p>
                     </div>
             </div>
          </div>
 
-           <ul><li><font color="#b33a8d">ZIP</font></li><li><font color="#bc1086">ZOP</font></li><li><font color="#791358">PLIC</font><li><font color="#f600a8">PLAC</font></li></ul>
-           <p><font color="#f6004a">FALA TIME</font> </p>
-           <p><font color="#f6004a">NÃO É SÓ UM SITE</font> </p>
-           <p><font color="#f6004a"><font size=+2><b>É O SITE</b></font></font></p>
-           <p><font color="#f6004a">E ELE ESTÁ FUNCIONANDO</font> </p>
        </div>
 
-       {% endfor %}
+
+
+
+{% endfor %}
+
+         </div>
+
+               <ul><li><font color="#ffffff"><font face="Cambria">ZIP</font></font></li><li><font color="#ffffff"><font face="Cambria">ZOP</font></font></li>
+                   <li><font color="#ffffff"><font face="Cambria">PLIC</font></font><li><font color="#ffffff"><font face="Cambria">PLAC</font></font></li></ul>
+               <p><font color="#ffffff"><font face="Cambria">FALA TIME</font></font></p>
+               <p><font color="#ffffff"><font face="Cambria">NÃO É SÓ UM SITE</font> </font></p>
+               <p><font color="#ffffff"><font size=+2><font face="Cambria"><b>É O SITE </b></font></font></font></p>
+               <p><font color="#ffffff"><font face="Cambria">E ELE ESTÁ FUNCIONANDO</font></font></p>
+
+
 {% endblock %}
